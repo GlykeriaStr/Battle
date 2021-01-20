@@ -4,9 +4,16 @@ class Battle < Sinatra::Base
   # app code here...
 
   get '/' do
-    'Hello Battle!'
-  end
+    erb(:index)
+    end
 
+  post '/names' do 
+    @player_1 = params[:player_1_name]
+    @player_2 = params[:player_2_name]
+    erb(:play)
+  end
+  
   run! if app_file == $0
+  
 
 end
