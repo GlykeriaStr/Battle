@@ -1,4 +1,8 @@
+<% if @game.current_turn.name == @game.player_2.name %>
 <%=@game.player_1.name%> attacked <%=@game.player_2.name%>
+<%else%>
+<%=@game.player_2.name%> attacked <%=@game.player_1.name%>
+<%end%>
 
 <div>
     <%= @game.player_1.name %>: <%= @game.player_1.health %>HP
