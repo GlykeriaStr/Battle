@@ -26,6 +26,7 @@ class Battle < Sinatra::Base
     @game = $game
     @game.attack(@game.player_2)
     @player_2_score = @game.player_2.health
+    @game.switch_turn
     erb(:attack)
   end
 

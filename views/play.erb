@@ -1,6 +1,12 @@
 <%= @game.player_1.name + ' vs. ' + @game.player_2.name %>
 <div>
+  <%=@game.player_1.name%>: <%= @game.player_1.health %>HP
+</div>
+<div>
   <%=@game.player_2.name%>: <%= @game.player_2.health %>HP
 </div>
 
 <a href="/attack">Attack</a>
+
+
+<h4> <%=@game.current_turn.name%>'s turn! </h4>

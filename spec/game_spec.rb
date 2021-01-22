@@ -29,4 +29,12 @@ describe Game do
       game.attack(mittens)
     end
   end
+
+  describe '#switch_turn' do
+    it 'switches turns from player to player' do
+      allow(mittens).to receive(:take_damage)
+      game.attack(mittens)
+      expect(game.current_turn).to eq :mittens
+    end
+  end
 end
