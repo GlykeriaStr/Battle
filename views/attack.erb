@@ -1,5 +1,7 @@
-<%=@player_1%> attacked <%=@player_2%>
+<%=@player_1.name%> attacked <%=@player_2.name%>
 
 <div>
-    <%= @player_2 %> HP = <%= @player_2_score.to_s %>
+    <%= @player_2.name %>: <%= @player_2_score.to_s %>HP
 </div>
+
+<input type='submit' value='OK'>
