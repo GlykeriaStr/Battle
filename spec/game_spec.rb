@@ -34,7 +34,7 @@ describe Game do
     it 'switches turns from player to player' do
       allow(peter).to receive(:take_damage)
       game.attack(peter)
-      expect(game.current_turn).to eq :Peter
+      expect(game.current_player).to eq :Peter
     end
   end
 end
