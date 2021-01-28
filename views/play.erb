@@ -6,7 +6,8 @@
   <%=@game.player_2.name%>: <%= @game.player_2.health %>HP
 </div>
 
-<a href="/attack">Attack</a>
-
+<form action="/attack" method="post">
+  <input type="submit" value="Attack">
+</form>
 
 <h4> <%=@game.current_player.name%>'s turn! </h4>

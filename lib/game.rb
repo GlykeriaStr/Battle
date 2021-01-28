@@ -30,4 +30,16 @@ class Game
     @victim == player_2 ? @victim = player_1 : @victim = player_2
   end
 
+  def game_over?
+    losing_players.any?
+  end
+
+  def loser
+    losing_players.first
+  end
+
+  private
+  def losing_players
+    players.select { |player| player.health <= 0}
+  end
 end
